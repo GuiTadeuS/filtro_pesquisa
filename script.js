@@ -1,5 +1,3 @@
-// Vídeo onde aprendi tudo: https://www.youtube.com/watch?v=TlP5WIxVirU&t=531s&ab_channel=
-
 const userCardTemplate = document.querySelector("[data-user-template]")
 const userCardContainer = document.querySelector("[data-user-cards-container]")
 const searchInput = document.querySelector("[data-search]")
@@ -17,7 +15,6 @@ fetch("https://jsonplaceholder.typicode.com/users")
 .then(res => res.json())
 .then(data => {
     users = data.map(user => { 							// Cada "user" (não confunde user com users) tem um card criado
-        // Tudo é criado por referência
         // Para cada usuário da API importada, um "card" será criado
         const card = userCardTemplate.content.cloneNode(true).children[0];
         const header = card.querySelector("[data-header]");
